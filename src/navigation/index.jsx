@@ -2,7 +2,6 @@ import {BrowserRouter, Route, Routes} from "react-router-dom"
 import {Header} from "../components/Header"
 import Home from "../pages/Home"
 import Register from "../pages/Register"
-import PaymentSuccess from "../pages/PaymentSuccess"
 import Login from "../pages/Login"
 import Cart from "../pages/Cart"
 import Menu from "../pages/Menu";
@@ -23,7 +22,6 @@ const Navigation = () => {
             <Route path="/register" element = {<Register/>} />
             <Route path="/menu" element = {<Menu/>} />
             <Route path="/cart" element = {<Cart/>} />
-            <Route path="/payment-success" element = {<PaymentSuccess/>} />
         </Routes>
         </BrowserRouter>
     )

@@ -20,7 +20,7 @@ const ProductDetailCard = ({ product, onAddProduct }) => {
                 <img src={product.imageUrl} className="w-40 h-40 rounded-xl object-cover" alt={product.name} />
             </div>
             <div className="w-full flex items-center justify-center">
-                <button onClick={handleAddToCart}>Add to Cart</button>
+            <div className="py-4 flex items-center justify-center"><button onClick={handleAddToCart}  className="bg-yellow-400 hover:bg-yellow-500 w-60 h-10 p-5 flex items-center justify-center text-lg rounded-lg">Add to Cart</button></div>
             </div>
         </div>
     )
