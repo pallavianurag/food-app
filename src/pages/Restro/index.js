@@ -6,7 +6,7 @@ import { addToCart } from "../../stores/cart/cartSlice";
 import { useParams } from "react-router-dom";
 export const Restro = () => {
 
-    const {id} = useParams()
+    const {name} = useParams()
 
     const dispatch = useDispatch();
     const products = useSelector(selectAllProducts);
@@ -22,7 +22,9 @@ export const Restro = () => {
    
     return(
         <div>
-                        
+                       <div className="py-4 flex items-center justify-center">
+                         <h1 className="mb-4 text-xl py-10 font-extrabold leading-none tracking-tight text-black md:text-5xl lg:text-6xl">{name}</h1>
+                       </div>  
                         {
                     products.products && products.products[0].products.map((product, index) => {
                         return (

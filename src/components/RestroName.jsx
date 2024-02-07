@@ -17,7 +17,7 @@ export const RestroName = () => {
          <br></br>
         <div className="bg-black text-white text-center py-5">
            
-            {products.products.map((product) =><div className="bg-yellow-600 hover:bg-yellow-700 text-lg font-medium p-3"><Link to= {`/restro/${product.name._id}`}>{product.name.name} </Link></div>)}
+            {products.products.map((product) =><div className="bg-yellow-600 hover:bg-yellow-700 text-lg font-medium p-3"><Link to= {`/restro/${product.name.name}`}>{product.name.name} </Link></div>)}
         </div>
         </div>
     )

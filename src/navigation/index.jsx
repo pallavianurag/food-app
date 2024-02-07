@@ -18,7 +18,7 @@ const Navigation = () => {
         <Routes>
             <Route path="/" element = {<Home/>} />
             <Route path="/login" element = {<Login/>} />
-            <Route path="/restro/:id" element ={<Restro/>}/>
+            <Route path="/restro/:name" element ={<Restro/>}/>
             <Route path="/register" element = {<Register/>} />
             <Route path="/menu" element = {<Menu/>} />
             <Route path="/cart" element = {<Cart/>} />

@@ -53,7 +53,7 @@ const Register = () => {
     }
     return (
         <div>
-        <h1 className="flex items-center justify-center text-3xl font-bold bg-black text-white">FOODUP!</h1>
+        <h1 className="flex items-center justify-center text-3xl mb-4 text-xl bg-black font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">FOODUP!</h1>
         <div className="h-screen bg-black flex  items-center justify-center">
             <div className="rounded-lg max-w-md w-full flex flex-col items-center justify-center relative">
                 <div className="absolute inset-0 transition duration-300 animate-pink blur  gradient bg-gradient-to-tr from-rose-500 to-yellow-500"></div>
