@@ -8,7 +8,7 @@ export const Banner = () => {
                     Food Ordering Made Easy!
                 </h1>
                 <p className="mb-6 text-md text-white"> We've streamlined the dining experience to make indulging in your favorite meals a breeze. Savor the simplicity – where satisfying your cravings has never been more convenient!</p>
-                <a href="/menu" className="bg-yellow-500 hover:bg-yellow-600 w-60 h-10 flex items-center justify-center rounded-xl text-bold text-white">
+                <a href="#restro" className="bg-yellow-500 hover:bg-yellow-600 w-60 h-10 flex items-center justify-center rounded-xl text-bold text-white">
                         See Menu
                     </a>
                 {/* <p className="bg-red-400 hover:bg-red-500 w-60 h-6 flex items-center justify-center text-sm">

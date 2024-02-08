@@ -13,9 +13,9 @@ export const RestroName = () => {
     }, [])
 
     return(<div>
-         <h1 className="text-4xl font-bold text-center">Our Top Restaurants</h1>
+         <h1 className="text-4xl font-bold text-center" id = "restro">Our Top Restaurants</h1>
          <br></br>
-        <div className="bg-black text-white text-center py-5">
+        <div className="bg-black text-white text-center py-5" >
            
             {products.products.map((product) =><div className="bg-yellow-600 hover:bg-yellow-700 text-lg font-medium p-3"><Link to= {`/restro/${product.name.name}`}>{product.name.name} </Link></div>)}
         </div>

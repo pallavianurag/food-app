@@ -8,22 +8,13 @@ const app = express();
 const productRouter = require('./routes/ProductRouter');
 const userRouter = require('./routes/userRouter');
 
-const Order = require('./models/orderModel');
+
 
 const env = require('dotenv').config({path: '../.env'});
 
 
 var corsOptions = {
     origin: "http://localhost:3000"
-}
-
-const calculateOrderAmount = (orderItems) => {
-    const initialValue = 0;
-    const itemsPrice = orderItems.reduce(
-        (previousValue, currentValue) =>
-        previousValue + currentValue.price * currentValue.amount, initialValue
-    );
-    return itemsPrice * 100;
 }
 
 app.use(cors(corsOptions));
@@ -54,33 +45,3 @@ app.listen(PORT, () => {
 app.use('/api/', productRouter);
 app.use('/api/', userRouter);
 
-app.post('/create-payment-intent', async(req, res) => {
-    try {
-        const { orderItems, shippingAddress, userId } = req.body;
-        console.log(shippingAddress);
-
-        const totalPrice = calculateOrderAmount(orderItems);
-
-        const taxPrice = 0;
-        const shippingPrice = 0;
-
-        const order = new Order({
-            orderItems,
-            shippingAddress,
-            
-            totalPrice,
-            taxPrice,
-            shippingPrice,
-            user: ''
-        })
-
-        await order.save();
-
-    } catch(e) {
-        res.status(400).json({
-            error: {
-                message: e.message
-            }
-        })
-    }
-})

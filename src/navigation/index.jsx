@@ -8,6 +8,7 @@ import Menu from "../pages/Menu";
 import { useSelector } from "react-redux";
 import { cartProducts } from "../stores/cart/cartSlice";
 import { Restro } from "../pages/Restro"
+import { Footer } from "../components/Footer"
 
 
 const Navigation = () => {
@@ -23,6 +24,7 @@ const Navigation = () => {
             <Route path="/menu" element = {<Menu/>} />
             <Route path="/cart" element = {<Cart/>} />
         </Routes>
+        <Footer/>
         </BrowserRouter>
     )
 }

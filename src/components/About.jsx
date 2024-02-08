@@ -6,7 +6,7 @@ export const About = () => {
         <div className="bg-white">
             <div className="p-24 grid grid-cols-2">
                 <div className="">
-                    <h1 className="text-2xl font-medium">About Us</h1>
+                    <h1 className="text-2xl font-medium" id ="about">About Us</h1>
                     <p className="text-lg py-5">
                     
 Welcome to FOODUP! – Your Culinary Companion!

@@ -9,22 +9,36 @@ export const cartSlice = createSlice({
     initialState,
     reducers: {
         addToCart: (state, action) => { 
-            console.log("addToCart", state.products, action.payload)
-            console.log({ products: [...state.products, {...action.payload, amount: 1}]})
-            return { products: [...state.products, {...action.payload, amount: 1}]}
+            let found = false;
+            let products = state.products.map((product) => {
+                if(product._id === action.payload._id) {
+                    found = true;
+                    return {...product, amount: product.amount + 1}
+                } else 
+                    return product
+            })
+            
+            return found ? {products: [...products]} : { products: [...state.products, {...action.payload, amount: 1}]}
         },
         clearCart: (state) => {
             return { products: []}
         },
         incrementProductAmount: (state, action) => {
-            console.log('increment');
-            return { products: state.products.map(product => product.id === action.payload.id ? {...product, amount: product.amount + 1} : product)}
+            return { products: state.products.map(product => product._id === action.payload._id ? {...product, amount: product.amount + 1} : product)}
         },
         decrementProductAmount: (state, action) => {
-            return { products: state.products.map(product => product.id === action.payload.id ? {...product, amount: product.amount - 1} : product)}
+            return { products: state.products.map((product) => {
+                if(product._id === action.payload._id)
+                    return {...product, amount: product.amount - 1}                 
+                else 
+                    return product
+            }).filter((product) => {
+                return product.amount !== 0
+            })}}
         }
+        
     }
-})
+)
 
 export const cartProducts = state => state.cart.products
 
