@@ -1,4 +1,4 @@
-//import Button from "./elements/Button";
+
 
 export const Banner = () => {
     return (
@@ -11,18 +11,9 @@ export const Banner = () => {
                 <a href="#restro" className="bg-yellow-500 hover:bg-yellow-600 w-60 h-10 flex items-center justify-center rounded-xl text-bold text-white">
                         See Menu
                     </a>
-                {/* <p className="bg-red-400 hover:bg-red-500 w-60 h-6 flex items-center justify-center text-sm">
-                    Get Started Today!
-                </p> */}
-
+                
             </div>
-            {/* <div className="banner-image w-full md:w-1/2 p-3 flex justify-end">
-            <div className="btn-container py-10">
-                    <button>Order Now</button>
-
-                </div>
-                 <img src={require("../assets/images/pizza_banner.png")} alt="banner" className="max-h-95" /> 
-            </div> */}
+            
         </div>
     )
 }

@@ -9,7 +9,7 @@ import { ProductsSummary } from "../../components/ProductsSummary";
 
 const Cart = () => {
     const cart = useSelector(cartProducts);
-    const tabs= ['Summary', 'Delivery', 'Payment'];
+    const tabs= ['Summary', 'Confirmation'];
     const [currentTab, handleTabSwitch] = useTabSwitch(tabs, 'Summary');
 
     const checkAuthToken = () => {
@@ -40,7 +40,13 @@ const Cart = () => {
             <div className={`tabs ${currentTab !== 'Summary' ? 'hidden' : ''}`}>
                 <ProductsSummary />
                 <div className="flex justify-end p-2">
-                    <button className="flex items-center" onClick={()=>handleTabSwitch('Delivery')}><span className="mr-1">Next</span><ArrowRightSvg /></button>
+                    <button className="flex items-center" onClick={()=>handleTabSwitch('Confirmation')}><span className="mr-1">Next</span><ArrowRightSvg /></button>
+                </div>
+            </div>
+            <div className={`tabs ${currentTab !== 'Confirmation' ? 'hidden' : ''}`}>
+                
+                <div className="flex justify-center p-2">
+                    <h1>Order Placed!</h1>
                 </div>
             </div>
         </div>
