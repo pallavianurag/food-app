@@ -24,7 +24,6 @@ const Navigation = () => {
             <Route path="/menu" element = {<Menu/>} />
             <Route path="/cart" element = {<Cart/>} />
         </Routes>
-        <Footer/>
         </BrowserRouter>
     )
 }

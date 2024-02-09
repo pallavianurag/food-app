@@ -22,15 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors(corsOptions));
-app.use(
-  express.json({
-    verify: function (req, res, buf) {
-      if (req.originalUrl.startsWith('/webhook')) {
-        req.rawBody = buf.toString();
-      }
-    },
-  })
-);
+
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 

@@ -13,6 +13,7 @@ export default function Home()  {
         <About/>
         <RestroName/>
         <div className="py-10"></div>
+        <Footer/>
         </>
     )
 }
